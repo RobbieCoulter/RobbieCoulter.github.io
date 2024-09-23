@@ -1,0 +1,12 @@
+body {
+    background-color:antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    color:gray;
+}
+.about {
+    width 100%;
+    color:darkslategray;
+}
