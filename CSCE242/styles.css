@@ -1,0 +1,36 @@
+/*whole page*/
+body {
+    font-family:'Times New Roman', Times, serif;
+    background:beige;
+    margin: 0;
+}
+/*content*/
+content {
+    width:80%;
+    margin: auto;
+    background: white;
+    padding: 15px 20px;
+    border: radius 2px;
+}
+/*headings*/
+h1 {
+    color:darkslategray;
+    margin: auto
+}
+h2 {
+    color:steelblue;
+    margin:auto;
+}
+/*body*/
+p{
+    color: black;
+}
+li{
+    color:black;
+}
+/*links*/
+a {
+    text-decoration: none;
+    color:darkred;
+    font: bold;
+}

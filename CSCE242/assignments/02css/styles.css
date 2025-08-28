@@ -1,0 +1,52 @@
+/*whole page*/
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background: url("images/habitat.webp");
+    background-size: cover;
+    margin:0;
+}#intro,#closer {
+    background-color: darkgreen;
+    color: white;
+    line-height: 2;
+    padding: 5px;
+    margin: 20px auto;
+    border-radius: 10px;
+    font-weight: bold;
+}
+/*header*/
+h1 {
+    color: darkgreen;
+    text-align: center;
+}
+h2 {
+    color:saddlebrown;
+    text-align: center;
+}
+
+/*images*/
+img{
+    border: 8px solid darkgreen;
+    padding: 5px;
+    margin: 15px auto;
+    max-width: 400px;
+    width:100%;
+    display:block;
+    border-radius: 15px;
+}
+
+/*tables*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+td, th {
+    border: 2px black;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background-color: darkgreen;
+    color: white;
+}
+
