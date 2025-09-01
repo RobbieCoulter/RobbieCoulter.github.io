@@ -1,36 +1,112 @@
-/*whole page*/
+/*Base*/
+* {
+    box-sizing: border-box;
+}
 body {
-    font-family:'Times New Roman', Times, serif;
-    background:beige;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:url(images/compbackground.avif);
+    background-size: cover;
+    color: black;
+    line-height: 1.5;
+
 }
-/*content*/
-content {
-    width:80%;
-    margin: auto;
-    background: white;
-    padding: 15px 20px;
-    border: radius 2px;
+.wrap {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
-/*headings*/
-h1 {
-    color:darkslategray;
-    margin: auto
+
+/*header*/
+.site-header {
+    background:lightskyblue;
+    border-bottom:1px solid lightgray;
 }
-h2 {
-    color:steelblue;
-    margin:auto;
+.header-bar {
+    padding: 12px 0 8px;
 }
-/*body*/
-p{
+.tiny-name {
+    margin: 0 ;
+    font-size: 0.95rem;
     color: black;
 }
-li{
-    color:black;
+.title-block {
+    text-align: center;
+    margin-top: 6px;
 }
-/*links*/
-a {
+.title-block h1 {
+    margin: 6px 0 4px;
+    font-weight: 700 ;
+}
+.title-block h2 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.repo {
+    margin: 6px 0 10px;
+    text-align:center;
+}
+.repo a {
+    color: lightcoral;
     text-decoration: none;
-    color:darkred;
-    font: bold;
 }
+.repo a:hover {
+    text-decoration: underline;
+}
+
+/*cards*/
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 18px 0 8px;
+}
+.card {
+    background:aliceblue;
+    border: 1px solid lightsteelblue;
+    border-radius: 8px;
+    padding:14px;
+    box-shadow:0 2px 6px rgba(0, 0, 0,.04);
+    flex: 1 1 300px;
+    max-width: 320px;
+}
+.card h3 {
+    margin: 2px 0 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+.ss {
+    display: block;
+}
+.ss img {
+    width: 100%;
+    height: 150px;
+    object-fit: 150px;
+    display:cover;
+    border:1px solid lightslategray;
+    background:lightsteelblue;
+    border-radius: 4px;
+}
+.card .desc {
+    margin: 10px 2px 0;
+    font-size: 0.95rem;
+    color: black;
+}
+
+/*stack on small screens*/
+@media (max-width: 760px){
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 100%;
+    }
+    .repo{
+        text-align: center;
+    }
+}
+
