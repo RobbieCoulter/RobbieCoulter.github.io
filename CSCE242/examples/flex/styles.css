@@ -15,7 +15,31 @@ body {
     border-radius: 5px;
     padding:5px;
 }
-
+#main-content section, #main-contnet aside {
+    padding:5px;
+}
+.squirrel {
+    background:lightgreen;
+    padding:5px;
+    border-radius:5px;
+    margin:5px;
+}
+/*gallery*/
+#gallery{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#gallery section{
+    width: 25%;
+    text-align: center;
+}
+#gallery img{
+    padding:5px;
+}
+/*images*/
+img{
+    max-width:100%
+}
 
 
 
@@ -49,7 +73,12 @@ body {
 h1 {
     text-align: center;
 }
-
+.hide{
+    display: none;
+}
+.hide-small {
+    display: none;
+}
 /*larger devices*/
 @media only screen and (min-width: 768px) {
     body {
@@ -63,6 +92,21 @@ h1 {
     /*columns*/
     .columns {
         display: flex;
+    }
+    .one{
+        flex:1;
+    }
+    .two{
+        flex:2;
+    }
+    .three{
+        flex: 3;
+    }
+    .four{
+        flex:4;
+    }
+    .five{
+        flex:5;
     }
     /*main nav*/
     #main-nav li {
@@ -81,5 +125,8 @@ h1 {
         background: #455902;
         color: white;
         border-bottom: 1px solid white;
+    }
+    .hide-small{
+        display: block;
     }
 }
