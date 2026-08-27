@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/mountain.jpg);
+    background-size: cover;
+    color:darkslategray
+}
+
+#content {
+    background-color:beige;
+    width:80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    color: darkgreen;
+    text-align: center;
+}
+
+h2{
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 16px;
+}
+
+#elk-images {
+    text-align: center;
+}
+
+img {
+    width: 40%;
+    padding: 5px;
+    margin: 10px;
+    border: 3px solid tan;
+}
+
+#elk-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: darkgreen;
+    color: white;
+    padding: 10px;
+    border:1px solid black;
+}
+
+td {
+    background-color: wheat;
+    padding:10px;
+    border: 1px solid black;
+}
