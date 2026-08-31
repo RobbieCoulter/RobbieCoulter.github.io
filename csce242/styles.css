@@ -46,16 +46,22 @@ h2{
 }
 
 #assignments, #projects {
-    list-style-type: none;
-    padding: 0;
+    margin-bottom: 20px;
 }
 
-#assignments li, #projects li {
+.assignment, .project {
     background-color: aliceblue;
-    margin: 10px 0;
     padding: 15px;
+    margin: 10px;
     border: 1px solid lightsteelblue;
-    border-radius: 6px;
+}
+
+.assignment img, .project img {
+    width: 100%;
+}
+
+.assignment h3, .project h3 {
+    text-align: center;
 }
 
 a {
@@ -79,4 +85,13 @@ a:hover {
     color: white;
     padding: 15px;
     border-radius: 8px;
+}
+
+@media (min-width: 1000px) {
+    .columns {
+        display: flex;
+    }
+    .assignment, .project {
+        flex: 1;
+    }
 }
