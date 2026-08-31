@@ -1,0 +1,119 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:gray;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+    background-color: beige;
+}
+
+#main-header h1 {
+    text-align: center;
+    color: cadetblue;
+    padding: 30px;
+}
+
+#sidebar {
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+}
+
+#pictures {
+    background-color: beige;
+}
+
+.picture {
+    background-color: cadetblue;
+    margin: 5px;
+}
+
+.picture h2 {
+    color:white;
+    text-align: center;
+}
+
+.picture img {
+    width: 100%;
+}
+
+.idea {
+    background-color: cadetblue;
+    margin-top: 10px;
+    padding:5px;
+}
+
+.idea img {
+    width: 100%;
+}
+
+.idea-information {
+    color:white;
+    padding: 10px;
+}
+
+footer {
+    background-color: lightcoral;
+    color: white;
+    text-align: center;
+    padding:20px;
+}
+
+#main-nav ul, #quick-links {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+#main-nav li {
+    background-color: lightcoral;
+    padding: 15px;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+#main-nav a {
+    color:white;
+    text-decoration: none;
+}
+
+#quick-links li {
+    background-color: white;
+    padding:5px;
+    border-bottom: 1px solid pink;
+}
+
+#quick-links a {
+    color: lightcoral;
+    text-decoration: none;
+}
+
+@media (min-width: 1000px) {
+    .columns {
+        display: flex;
+    }
+    #main-nav li {
+        flex:1;
+        border:0;
+    }
+    .one {
+        flex:1;
+    }
+    .two {
+        flex:2;
+    }
+    .three {
+        flex:3;
+    }
+    .four {
+        flex: 4;
+    }
+    .five {
+        flex:5;
+    }
+    .six {
+        flex:6;
+    }
+}
