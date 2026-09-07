@@ -1,0 +1,403 @@
+/*Structure */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#222222;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+
+#top-links {
+    background: black;
+    display: flex;
+    gap: 20px;
+    padding: 8px 5%;
+}
+
+#top-links a {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#top-header {
+    background: black;
+    color: white;
+    padding: 20px 5% 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#usc-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#usc-logo {
+    background: #73000a;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, "times New Roman", serif;
+    font-weight: bold;
+}
+
+#usc-name p {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+}
+
+#usc-name h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+}
+
+#school-header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 35px;
+}
+
+/* Navigation*/
+
+#main-nav {
+    background: #73000a;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    padding: 0 8%;
+}
+
+#main-nav a {
+    color: white;
+    padding: 18px 0;
+    font-weight: bold;
+}
+/*hero*/
+#hero {
+    width: 100%;
+}
+
+#hero img {
+    width: 100%;
+    height: 630px;
+    object-fit: cover;
+}
+
+/*intro */
+
+#intro {
+    background: white;
+}
+
+.intro-text {
+    max-width: 950px;
+    margin: auto;
+    padding: 50px 25px;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+
+/*Education and research part */
+
+.feature-section {
+    display: flex;
+    align-items: stretch;
+    max-width: 1200px;
+    width:80%;
+    margin: 60px auto;
+}
+
+.feature-image {
+    flex: 1;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-text {
+    flex: 1;
+    padding: 50px;
+    background: #73000a;
+    color: white;
+}
+
+.feature-text h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    margin-top: 0;
+}
+
+.feature-text p {
+    color:white;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    background: black;
+    color: white; 
+    border: 2px solid white;
+    padding: 14px 24px; 
+    margin-top: 15px; 
+    font-weight: bold;
+}
+
+/*the quote */
+#quote-section {
+    display: flex;
+    align-items: stretch;
+    background: #f7f7f7;
+}
+
+#quote-text {
+    flex: 1;
+    padding: 70px;
+}
+
+#quote-text p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+#quote-text h3 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#quote-image {
+    flex: 1;
+}
+
+#quote-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Resource Cards */
+
+#resources {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 20px;
+    gap: 30px;
+}
+
+.resource-card {
+    flex: 1;
+    background: #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card img {
+    width: 100%;
+}
+
+.resource-text h2 {
+    color: #73000a;
+    font-family: Georgia, "Times New Roman", serif;
+    margin-top: 0;
+}
+
+.resource-text {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.resource-text p {
+    line-height: 1.5;
+    flex-grow: 1;
+    color: #444444;
+}
+
+.resource-text a {
+    color: #73000a;
+    font-weight: bold;
+    margin: 15px;
+}
+/* Centers */
+
+#centers {
+    display: flex;
+    background: #73000a;
+    color: white;
+    max-width: 1200px;
+    width: 90%;
+    margin: 60px auto;
+}
+
+#centers-image {
+    flex: 1;
+}
+
+#centers-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#centers-text {
+    flex: 1;
+    padding: 70px;
+}
+
+#centers-text h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+#centers-text p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#centers .button {
+    background: black;
+    color: white;
+    border: 2px solid white
+}
+
+/*connect */
+
+#connected {
+    text-align: center;
+    padding: 70px 25px;
+}
+
+#connected h2 {
+    color:#73000a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+}
+
+#connected-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+#connected-links a {
+    background: #73000a;
+    color:white;
+    padding: 18px 30px;
+    font-weight: bold;
+}
+
+/* footer */
+
+footer {
+    background: black;
+    color: white;
+    padding: 50px 5%;
+}
+
+#footer-content {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    gap: 60px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column a {
+    color: white;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer-column p {
+    line-height: 1.6;
+}
+
+/* flex */
+
+@media only screen and (max-width:760px) {
+    #top-header {
+        display: block;
+        text-align: center;
+    }
+    #top-links {
+        display: none;
+    }
+    #school-header h1 {
+        font-size: 28px;
+    }
+    #main-nav {
+        gap:0;
+        flex-direction: column;
+        padding:0;
+    }
+    #main-nav a {
+        text-align: center;
+        padding: 14px;
+        border-top: 1px solid #9b3a43;
+    }
+    #hero img {
+        height: 350px;
+    }
+    .feature-section {
+        flex-direction: column;
+    }
+    .reverse {
+        flex-direction: column-reverse;
+    }
+    .feature-text {
+        padding: 40px 25px;
+    }
+    #centers {
+        flex-direction: column;
+    }
+    #centers-text{
+        padding: 40px 25px;
+    }
+    #connected-links {
+        flex-direction: column;
+    }
+    #footer-content {
+        flex-direction: column;
+    }
+    #resources {
+        flex-direction: column;
+    }
+    #quote-section {
+        flex-direction: column;
+    }
+}
