@@ -1,0 +1,59 @@
+body {
+    background: #e8f1f2;
+    color: #2f5d62;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+h1{
+    font-size: 32px;
+    color: #234e52;
+}
+
+h2{
+    color:#d47b3f;
+    margin-top: 25px;
+}
+
+#destination-picker{
+    margin: 20px;
+    font-size: 20px;
+}
+
+select{
+    font-size: 15px;
+    padding:5px;
+    color:#234e52;
+    background: white;
+}
+
+#destinations {
+    width: 200px;
+    margin: auto;
+}
+
+#destinations a{
+    display: block;
+    color: #287271;
+    font-size: 15px;
+    margin: 15px;
+}
+
+#map{
+    margin-top: 20px;
+}
+
+iframe{
+    border:0;
+    max-width: 100%;
+}
+
+footer{
+    color: #d47b3f;
+    margin-top: 20px;
+}
