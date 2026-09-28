@@ -1,0 +1,453 @@
+/*colors*/
+:root {
+    --green: #16382A;
+    --tan: #C89B5B;
+    --cream:#F5F1E8;
+    --white:white;
+    --black:black;
+}
+
+/*Header*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+}
+
+header {
+    background: var(--green);
+    color: var(--white);
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#logo h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 14px;
+}
+
+/*Hero*/
+#hero {
+    height:430px;
+    background-image:url(images/homepage/hero.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-text {
+    color: var(--white);
+    text-align: center;
+}
+
+#hero-text p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#hero-text h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+#hero-text h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/*info*/
+#explore {
+    background: var(--cream);
+    padding: 10px 20px 40px 20px;
+}
+
+#explore h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+/*card*/
+#cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background: var(--green);
+    width: 220px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+}
+
+.card a {
+    display: block;
+    background: var(--tan);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 15px 10px 15px;
+    padding: 15px;
+}
+
+/*about*/
+#about{
+    background:var(--green);
+    color:var(--white);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+#about h2{
+    margin-top:0 ;
+    font-size: 24px;
+}
+
+#about p{
+    max-width: 700px;
+    margin: 10px auto;
+    font-size: 15px;
+}
+
+/*Species Page*/
+#species-hero {
+    height: 280px;
+    background-image: url(images/species/specieshero.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#species-hero-text{
+    color: var(--white);
+    margin-left: 30px;
+}
+
+#species-hero-text h1{
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+#species-hero-text p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#species-cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px 60px;
+}
+
+.fish-card{
+    background: var(--white);
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.fish-card img {
+    width: 100%;
+    height: 150px;
+}
+
+.fish-card h2{
+    color: var(--green);
+    font-size: 20px;
+    margin: 5px;
+}
+
+.fish-card p{
+    font-size: 15px;
+    margin: 15px;
+}
+
+/*gear page*/ 
+#gear-intro{
+    text-align: center;
+    padding: 15px;
+}
+
+#gear-intro p{
+    color: var(--tan);
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#gear-intro h1{
+    color: var(--green);
+    font-size: 36px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#gear-intro h3{
+    font-size: 14px;
+    font-weight: normal;
+    width: 500px;
+    margin: auto;
+}
+
+.gear-card{
+    background: var(--white);
+    width: 28%;
+    margin: 10px;
+    text-align: center;
+}
+
+.gear-card img{
+    width: 100%;
+    height: 150px;
+}
+
+.gear-card h2{
+    color: var(--green);
+    font-size: 20px;
+    margin: 5px;
+}
+
+.gear-card p{
+    font-size: 15px;
+    margin: 10px 15px 20px 15px;
+}
+
+.gear-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 80px 40px 80px;
+}
+
+/*locations*/
+#locations-hero{
+    height: 220px;
+    background-image: url(images/loacations/locohero.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#locations-hero-text {
+    color: var(--white);
+    margin-left: 50px;
+}
+
+#locations-hero-text h1{
+    font-size: 35px;
+}
+
+#locations {
+    padding: 10px 60px 30px 60px;
+}
+
+#locations h2 {
+    color: var(--green);
+    text-align: center;
+    font-size: 25px;
+}
+
+.locations-row {
+    display:flex;
+    justify-content:space-around;
+}
+
+.location-card{
+    background: var(--white);
+    width:22%;
+    margin:10px;
+    text-align: center;
+}
+
+.location-card img{
+    width:100%;
+    height: 120px;
+}
+
+.location-card h3{
+    color: var(--green);
+    margin:5px;
+}
+
+.location-card p {
+    font-size: 12px;
+    margin: 10px;
+}
+
+/*tips*/
+#tips-hero{
+    height: 250px;
+    background-image: url(images/tips/tipshero.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#tips-hero-text{
+    color: var(--white);
+    margin-left: 40px;
+}
+
+#tips-hero-text h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#tips-hero-text p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#tips {
+    padding: 10px 60px 30px 60px;
+}
+
+#tips h2{
+    color: var(--green);
+    text-align: center;
+    font-size: 24px;
+}
+
+.tips-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tip-card {
+    background: var(--white);
+    width: 22%;
+    margin: 10px;
+    text-align: center;
+}
+
+.tip-card img{
+    width: 100%;
+    height: 120px;
+}
+
+.tip-card h3{
+    color: var(--green);
+    margin: 5px;
+}
+
+.tip-card p{
+    font-size: 12px;
+    margin: 10px;
+}
+
+/*flex*/
+
+@media (max-width:700px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+    #logo {
+        justify-content: center;
+    }
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav a{
+        margin: 5px;
+    }
+    #hero {
+        height: 350px;
+    }
+    #hero-text h1 {
+        font-size: 30px;
+    }
+    #cards {
+        display: block;
+    }
+    .card {
+        width: 80%;
+        margin: 20px auto;
+    }
+    #species-hero-text{
+        margin: 20px;
+    }
+    #species-cards{
+        display: block;
+        padding: 15px;
+    }
+    .fish-card{
+        width: 90%;
+        margin: 20px auto;
+    }
+    #gear-intro h3{
+        width: auto;
+    }
+    .gear-cards{
+        display: block;
+        padding: 15px;
+    }
+    .gear-card{
+        width:90%;
+        margin: 20px auto;
+    }
+    #locations {
+        padding:15px;
+    }
+    .locations-row{
+        display: block;
+    }
+    .location-card {
+        width: 90%;
+        margin: 20px auto;
+    }
+    #locations-hero-text {
+        margin-left: 20px;
+    }
+    #tips{
+        padding:15px;
+    }
+    .tips-row{
+        display: block;
+    }
+    .tip-card{
+        width:90%;
+        margin: 20px auto;
+    }
+    #tips-hero-text{
+        margin: 20px;
+    }
+}
