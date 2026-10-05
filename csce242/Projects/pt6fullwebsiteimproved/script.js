@@ -1,3 +1,8 @@
+function toggleNav() {
+    let nav = document.getElementById("main-nav");
+    nav.classList.toggle("show-nav");
+}
+
 function showMap(location) {
     document.getElementById("location-map").src = 
         "https://www.google.com/maps?q=" + location + "&output=embed";

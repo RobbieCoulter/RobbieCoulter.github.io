@@ -480,6 +480,14 @@ footer {
     margin-right: 15px;
 }
 
+#toggle-nav {
+    display: none;
+    color: var(--white);
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10px;
+}
+
 /*flex*/
 
 @media (max-width:700px) {
@@ -490,9 +498,15 @@ footer {
     #logo {
         justify-content: center;
     }
-    nav {
-        justify-content: center;
-        flex-wrap: wrap;
+    #toggle-nav {
+        display: block;
+    }
+    #main-nav {
+        display: none;
+    }
+    #main-nav.show-nav {
+        display: flex;
+        flex-direction: column;
     }
     nav a{
         margin: 5px;
@@ -558,7 +572,7 @@ footer {
     #tips-hero-text{
         margin: 20px;
     }
-        footer {
+    footer {
         padding: 25px;
     }
 
