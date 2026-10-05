@@ -34,25 +34,25 @@
             <section id="locations">
                 <h2>Saltwater Fishing</h2>
                 <div class="locations-row">
-                    <div class="location-card">
+                    <div class="location-card" onclick="showMap('Charleston Harbor SC')">
                         <img src="images/loacations/charleston.png" alt="Charleston Harbor">
                         <h3>Charleston Harbor</h3>
                         <p>Charleston's harbor, creeks, and nearby inlets provide excellent inshore fishing throughout the year. Common catches include redfish, spotted seatrout, flounder, and black drum.</p>
                     </div>
 
-                    <div class="location-card">
+                    <div class="location-card" onclick="showMap('Hilton Head SC')">
                         <img src="images/loacations/hiltonhead.png" alt="Hilton Head">
                         <h3>Hilton Head</h3>
                         <p>Fish the tidal creeks, sounds, and coastal waters surrounding one of South Carolina's best-known barrier islands. Common catches include redfish, spotted seatrout, flounder, and sheepshead.</p>
                     </div>
 
-                    <div class="location-card">
+                    <div class="location-card" onclick="showMap('Murrells Inlet SC')">
                         <img src="images/loacations/murells.png" alt="Murrells Inlet">
                         <h3>Murrells Inlet</h3>
                         <p>This coastal inlet offers productive fishing from marsh creeks and jetties to nearshore and offshore waters. Common catches include flounder, redfish, black drum, and Spanish mackerel.</p>
                     </div>
 
-                    <div class="location-card">
+                    <div class="location-card" onclick="showMap('Myrtle Beach SC')">
                         <img src="images/loacations/myrtle.png" alt="Myrtle Beach">
                         <h3>Myrtle Beach</h3>
                         <p>Piers, beaches, and offshore waters give anglers a variety of ways to fish along the Grand Strand. Common catches include whiting, pompano, flounder, and Spanish mackerel.</p>
@@ -62,31 +62,69 @@
                 <h2>Freshwater Fishing</h2>
 
                 <div class="locations-row">
-                    <div class="location-card">
+                    <div class="location-card" onclick="showMap('Lake Murray SC')">
                         <img src="images/loacations/murray.png" alt="Lake Murray">
                         <h3>Lake Murray</h3>
                         <p>A large Midlands reservoir known for excellent bass and striped bass fishing just outside Columbia. Common catches include striped bass, largemouth bass, crappie, and catfish.</p>
                     </div>
 
-                    <div class="location-card">
+                    <div class="location-card" onclick="showMap('Lake Marion SC')">
                         <img src="images/loacations/marion.png" alt="Lake Marion">
                         <h3>Lake Marion</h3>
                         <p>South Carolina's largest lake offers expansive waters, flooded timber, and excellent fishing opportunities. Common catches include catfish, largemouth bass, striped bass, and crappie.</p>
                     </div>
 
-                    <div class="location-card">
+                    <div class="location-card" onclick="showMap('Lake Hartwell SC')">
                         <img src="images/loacations/hartwell.png" alt="Lake Hartwell">
                         <h3>Lake Hartwell</h3>
                         <p>This large Upstate reservoir provides miles of shoreline and productive fishing throughout the year. Common catches include largemouth bass, spotted bass, striped bass, and crappie.</p>
                     </div>
 
-                    <div class="location-card">
+                    <div class="location-card" onclick="showMap('Chattooga River SC')">
                         <img src="images/loacations/chattooga.png" alt="Chattooga River">
                         <h3>Chattooga River</h3>
                         <p>A scenic mountain river along the South Carolina border known for cold water and excellent trout fishing. Common catches include rainbow trout, brown trout, and brook trout.</p>
                     </div>
                 </div>
             </section>
+
+            <div id="map-modal">
+                    <div id="map-modal-content">
+                        <span id="map-close" onclick="closeMap()">&times;</span>
+                    <iframe id="location-map"></iframe>
+                </div>
+            </div>
         </main>
+
+                <footer>
+            <div id="footer-content">
+
+                <div class="footer-section">
+                    <h2>THE ANGLERS GUIDE</h2>
+                    <h3>Find Your Next Adventure</h3>
+
+                    <p>Helping South Carolina anglers find fish, explore new waters, and make the most of every fishing trip.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>FISH SOUTH CAROLINA</h3>
+
+                <p>From freshwater lakes and rivers to coastal marshes and offshore waters, South Carolina has something for every angler.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>STAY CONNECTED</h3>
+
+                <p>Get outside, explore new waters, and make your next fishing trip your best one yet.</p>
+
+                <div id="footer-circles">
+                    <div class="footer-circle"></div>
+                    <div class="footer-circle"></div>
+                    <div class="footer-circle"></div>
+                </div>
+            </div>
+          </div>
+        </footer>
+        <script src="script.js"></script>
      </body>
 </html>

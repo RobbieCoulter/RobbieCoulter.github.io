@@ -111,6 +111,7 @@ nav a {
 .card img {
     width: 100%;
     height: 140px;
+    object-fit: cover;
 }
 
 .card a {
@@ -125,21 +126,40 @@ nav a {
 
 /*about*/
 #about{
-    background:var(--green);
-    color:var(--white);
-    text-align: center;
-    padding: 30px 20px;
+    background:var(--tan);
+    padding: 50px 80px;
 }
 
-#about h2{
-    margin-top:0 ;
+#about-picture{
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+#about-picture img{
+    width:70%;
+    height: 350px;
+    object-fit: cover;
+}
+
+#about-text {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 40%;
+    background: var(--green);
+    color: var(--white);
+    padding: 25px;
+}
+
+#about-text h2 {
+    margin-top: 0;
     font-size: 24px;
 }
 
-#about p{
-    max-width: 700px;
-    margin: 10px auto;
+#about-text p {
     font-size: 15px;
+    line-height: 1.5;
 }
 
 /*Species Page*/
@@ -184,6 +204,7 @@ nav a {
 .fish-card img {
     width: 100%;
     height: 150px;
+    object-fit: cover;
 }
 
 .fish-card h2{
@@ -234,6 +255,7 @@ nav a {
 .gear-card img{
     width: 100%;
     height: 150px;
+    object-fit: cover;
 }
 
 .gear-card h2{
@@ -298,6 +320,7 @@ nav a {
 .location-card img{
     width:100%;
     height: 120px;
+    object-fit: cover;
 }
 
 .location-card h3{
@@ -308,6 +331,46 @@ nav a {
 .location-card p {
     font-size: 12px;
     margin: 10px;
+}
+
+/*location map*/
+#map-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+#map-modal-content {
+    background: var(--cream);
+    width: 70%;
+    margin: 8% auto;
+    padding: 20px;
+    position: relative;
+}
+
+#location-map {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+#map-close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    background: var(--cream);
+    padding: 2px 8px;
+}
+
+.location-card {
+    cursor: pointer;
 }
 
 /*tips*/
@@ -360,6 +423,7 @@ nav a {
 .tip-card img{
     width: 100%;
     height: 120px;
+    object-fit: cover;
 }
 
 .tip-card h3{
@@ -370,6 +434,50 @@ nav a {
 .tip-card p{
     font-size: 12px;
     margin: 10px;
+}
+
+/*footer*/
+footer {
+    background:var(--green);
+    color: var(--white);
+    padding: 40px 60px;
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h2{
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+.footer-section h3 {
+    color: var(--tan);
+    font-size: 20px;
+}
+
+.footer-section p {
+    font-size: 15px;
+    line-height:1.5;
+}
+
+#footer-circles {
+    display:flex;
+    margin-top: 20px;
+}
+
+.footer-circle {
+    background: var(--tan);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 /*flex*/
@@ -449,5 +557,41 @@ nav a {
     }
     #tips-hero-text{
         margin: 20px;
+    }
+        footer {
+        padding: 25px;
+    }
+
+    #footer-content {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #footer-circles {
+        justify-content: center;
+    }
+    #about {
+        padding: 20px;
+    }
+    #about-picture img {
+        width: 100%;
+        height: 300px;
+    }
+    #about-text {
+        position: static;
+        width: auto;
+        padding: 20px;
+    }
+    #map-modal-content {
+        width: 85%;
+        margin: 20% auto;
+    }
+    #location-map {
+        height: 350px;
     }
 }
