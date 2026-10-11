@@ -1,0 +1,123 @@
+---
+title: "STAT 516 Lec 04 in class"
+format: html
+---
+
+
+
+SC apartment data:
+```{r}
+link <- url("https://gregorkb.github.io/data/scapts.csv")
+scapts <- read.csv(link)
+head(scapts)
+```
+
+
+
+Overall F test:
+
+```{r}
+lm_out <- lm(log(price) ~ city + nbed + nbath + log(sqft) + pets + log(sqft):city, data = scapts)
+summary(lm_out)
+
+```
+
+How to get the critical value for the F test:
+
+```{r}
+alpha <- 0.05
+p <- 10
+n <- nrow(scapts)
+Fcrit <- qf(1-alpha, p,n-(p+1)) # quantile function for F distributions
+pval <- 1 - pf(15.31, p, n-(p+1))
+```
+
+
+
+Do a full-reduced model F test to see if number of bedrooms/bathrooms makes any difference.
+
+```{r}
+
+lm_full <- lm(log(price) ~ city + nbed + nbath + log(sqft) + pets + log(sqft):city, data = scapts)
+lm_red <- lm(log(price) ~ city + log(sqft) + pets + log(sqft):city, data = scapts)
+
+SSE_full <- sum(lm_full$residuals^2)
+SSE_red <- sum(lm_red$residuals^2)
+
+Ftest <- ( (SSE_red - SSE_full) / 2 ) / (SSE_full / (n - (p + 1)))
+Ftest
+Fcrit <- qf(1-alpha,2,n - (p+1))
+Fcrit
+pval <- 1 - pf(Ftest,2, n - (p+1))
+pval
+```
+
+
+Is "City" important?
+
+```{r}
+lm_red <- lm(log(price) ~ nbed + nbath + log(sqft) + pets, data = scapts)
+# same steps, here we removed 6 betas from the full model. 
+```
+
+
+Suppose I want the VIF for number of bedrooms in the full model.  Fit a model with number of bedrooms as the response:
+
+```{r}
+lm_nbed <- lm(nbed ~ city + nbath + log(sqft) + pets + log(sqft):city, data = scapts)
+summary(lm_nbed)
+vif <- 1/(1 - 0.7482)
+```
+
+
+
+Do an experiment:  Add a spurious predictor to the model, which is highly related to another variable.
+
+```{r}
+scapts$x <- scapts$sqft + rnorm(n,0,50)
+plot(scapts)
+```
+
+Now fit a model with the new variable:
+
+```{r}
+lmx_out <- lm(log(price) ~ city + nbed + nbath + log(sqft) + pets + log(sqft):city + log(x), data = scapts)
+
+summary(lmx_out)
+
+```
+
+Get VIFs for all variables easily:
+```{r}
+library(car) # first time you must run install.packages("car")
+
+vif(lm_out)
+vif(lmx_out)
+```
+
+
+Read in the SC apartments data again.
+```{r}
+link <- url("https://gregorkb.github.io/data/scapts.csv")
+scapts <- read.csv(link)
+head(scapts)
+
+```
+
+Choose a model using backward selection with AIC:
+
+```{r}
+lm_all <- lm(log(price) ~ city + nbed + nbath + log(sqft) + pets + log(sqft):city, data = scapts)
+step_back <- step(lm_all,direction = "backward", scope = formula(lm_all))
+summary(step_back)
+```
+
+For forward selection, fit a model with no predictors first.
+```{r}
+lm_none <- lm(log(price)~1, data=scapts)
+step_forw <- step(lm_none, direction = "forward", scope=formula(lm_all))
+summary(step_forw)
+```
+
+
+

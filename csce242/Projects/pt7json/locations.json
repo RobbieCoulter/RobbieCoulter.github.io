@@ -1,0 +1,89 @@
+[
+    {
+        "_id": 1,
+        "name": "Charleston Harbor",
+        "type": "Saltwater",
+        "region": "Lowcountry",
+        "fish": "Redfish, spotted seatrout, flounder, black drum",
+        "description": "Charleston's harbor, creeks, and nearby inlets provide excellent inshore fishing throughout the year.",
+        "img_name": "images/loacations/charleston.png",
+        "map": "Charleston Harbor SC"
+    },
+
+    {
+        "_id": 2,
+        "name": "Hilton Head",
+        "type": "Saltwater",
+        "region": "Lowcountry",
+        "fish": "Redfish, spotted seatrout, flounder, sheepshead",
+        "description": "Fish the tidal creeks, sounds, and coastal waters surrounding one of South Carolina's best-known barrier islands.",
+        "img_name": "images/loacations/hiltonhead.png",
+        "map": "Hilton Head SC"
+    },
+
+    {
+        "_id": 3,
+        "name": "Murrells Inlet",
+        "type": "Saltwater",
+        "region": "Grand Strand",
+        "fish": "Flounder, redfish, black drum, Spanish mackerel",
+        "description": "This coastal inlet offers productive fishing from marsh creeks and jetties to nearshore and offshore waters.",
+        "img_name": "images/loacations/murells.png",
+        "map": "Murrells Inlet SC"
+    },
+
+    {
+        "_id": 4,
+        "name": "Myrtle Beach",
+        "type": "Saltwater",
+        "region": "Grand Strand",
+        "fish": "Whiting, pompano, flounder, Spanish mackerel",
+        "description": "Piers, beaches, and offshore waters give anglers a variety of ways to fish along the Grand Strand.",
+        "img_name": "images/loacations/myrtle.png",
+        "map": "Myrtle Beach SC"
+    },
+
+    {
+        "_id": 5,
+        "name": "Lake Murray",
+        "type": "Freshwater",
+        "region": "Midlands",
+        "fish": "Striped bass, largemouth bass, crappie, catfish",
+        "description": "A large Midlands reservoir known for excellent bass and striped bass fishing just outside Columbia.",
+        "img_name": "images/loacations/murray.png",
+        "map": "Lake Murray SC"
+    },
+
+    {
+    "_id": 6,
+        "name": "Lake Marion",
+        "type": "Freshwater",
+        "region": "Santee Cooper",
+        "fish": "Catfish, largemouth bass, striped bass, crappie",
+        "description": "South Carolina's largest lake offers expansive waters, flooded timber, and excellent fishing opportunities.",
+        "img_name": "images/loacations/marion.png",
+        "map": "Lake Marion SC"
+    },
+
+    {
+    "_id": 7,
+    "name": "Lake Hartwell",
+    "type": "Freshwater",
+    "region": "Upstate",
+    "fish": "Largemouth bass, spotted bass, striped bass, crappie",
+    "description": "This large Upstate reservoir provides miles of shoreline and productive fishing throughout the year.",
+    "img_name": "images/loacations/hartwell.png",
+    "map": "Lake Hartwell SC"
+    },
+
+    {
+        "_id": 8,
+        "name": "Chattooga River",
+        "type": "Freshwater",
+        "region": "Upstate",
+        "fish": "Rainbow trout, brown trout, brook trout",
+        "description": "A scenic mountain river along the South Carolina border known for cold water and excellent trout fishing.",
+        "img_name": "images/loacations/chattooga.png",
+        "map": "Chattooga River SC"
+    }
+]

@@ -1,0 +1,97 @@
+---
+title: "Lec 01 code"
+format: html
+---
+
+## Example
+
+Here is some data and the normal QQ plot:
+
+```{r}
+wt <- c(41,34,40,44,33,42,52,38,32,31,31,35,
+39,44,42,42,35,33,40,48,51,32,41,35,
+38,48,37,35,42,41,40,47,40,46,33,38,
+51,39,40)
+qqnorm(wt)
+```
+
+Here we construct a confidence interval for the mean which assumes $\sigma = 5$ is known.
+```{r}
+
+n <- length(wt)
+xbar <- mean(wt)
+alpha <- 0.05
+za2 <- qnorm(1-alpha/2)
+sigma <- 5
+
+
+lo <- xbar - za2 * sigma / sqrt(n)
+up <- xbar + za2 * sigma / sqrt(n)
+```
+
+The sample mean is $\bar X_n =  `r xbar`$.
+
+The confidence interval is $[`r lo`,`r up`]$.
+
+
+Now we construct a confidence interval without assuming $\sigma$ is known.
+```{r}
+
+sn <- sd(wt)
+ta2 <- qt(1-alpha/2,n-1)
+lot <- xbar - ta2 * sn/sqrt(n)
+upt <- xbar + ta2 * sn/sqrt(n)
+```
+
+This confidence interval is $[`r lot`, `r upt`]$.
+
+
+```{r}
+mu0 <- 45
+Ttest <- (xbar - mu0)/(sn/sqrt(n))
+```
+
+
+```{r}
+mu0 <- 40
+Ttest <- (xbar - mu0)/(sn/sqrt(n))
+pt(Ttest,39-1)
+```
+
+A convenient way to get p-values and confidence intervals, etc. is the `t.test()` function:
+
+
+```{r}
+# two-sided
+t.test(wt,mu=45)
+# one-sided
+t.test(wt,mu=40,alternative="less")
+```
+
+Draw power curves for a right-sided test.
+
+```{r}
+mu0 <- 45
+alpha <- 0.05
+sigma <- 5
+n1 <- 10
+mu <- seq(40,55,by = 0.01)
+za <- qnorm(1 - alpha)
+gm1 <- 1 - pnorm(za - (mu - mu0)/(sigma/sqrt(n1)))
+
+n2 <- 20
+gm2 <- 1 - pnorm(za - (mu - mu0)/(sigma/sqrt(n2)))
+
+
+n3 <- 5
+gm3 <- 1 - pnorm(za - (mu - mu0)/(sigma/sqrt(n3)))
+plot(gm1~mu,type = "l")
+lines(gm2~mu,lty=2)
+lines(gm3~mu,lty=3)
+
+abline(v=mu0,col="gray")
+abline(h=alpha,col="gray")
+```
+
+
+

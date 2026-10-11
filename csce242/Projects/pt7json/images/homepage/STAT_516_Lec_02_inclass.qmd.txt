@@ -1,0 +1,96 @@
+---
+title: "Untitled"
+format: html
+---
+
+```{r}
+link <- url("https://gregorkb.github.io/data/hrbc.csv")
+hrbc <- read.csv(link)
+head(hrbc)
+
+
+# linear model
+lm_out <- lm(hem ~ rbc, data = hrbc)
+
+plot(hem ~ rbc, data = hrbc)
+abline(lm_out)
+
+```
+
+
+Build a confidence interval for $\beta_1$:
+
+```{r}
+confint(lm_out, level = 0.99)
+```
+
+
+Getting the p-values:
+
+```{r}
+summary(lm_out)
+```
+
+```{r}
+n <- nrow(hrbc)
+n
+```
+
+
+Get the fitted values:
+
+```{r}
+
+
+yhat <- predict(lm_out)
+
+
+plot(hem ~ rbc, data = hrbc)
+abline(lm_out)
+points(yhat ~ hrbc$rbc, col = "red")
+
+```
+
+
+
+Build a confidence interval for the true height of the line at RBC 6.
+```{r}
+
+xnew <- 6
+# confidence interval for mean hem level at rbc = 6
+predict(lm_out, newdata = data.frame(rbc = xnew),int="conf")
+
+# prediction interval for a single hem level at rbc = 6
+predict(lm_out, newdata = data.frame(rbc = xnew),int="pred")
+```
+
+
+Get ANOVA table:
+
+```{r}
+anova(lm_out)
+
+```
+
+
+Get a normal QQ plot of the residuals:
+```{r}
+plot(lm_out, which = 2)
+```
+
+Get a residuals versus fitted values plot:
+
+```{r}
+plot(lm_out,which=1)
+```
+
+Cook's Distance
+
+```{r}
+plot(lm_out, which = 4)
+```
+
+
+
+
+

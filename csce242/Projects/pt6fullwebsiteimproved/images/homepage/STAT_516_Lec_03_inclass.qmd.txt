@@ -1,0 +1,67 @@
+---
+title: "STAT 516 Lec 03 code"
+format: html
+---
+
+
+SC apartment data:
+```{r}
+link <- url("https://gregorkb.github.io/data/scapts.csv")
+scapts <- read.csv(link)
+head(scapts)
+plot(scapts)
+```
+
+
+```{r}
+lm_out <- lm(log(price) ~ nbath + nbed + log(sqft) + city + pets, data = scapts)
+
+summary(lm_out)
+```
+
+
+Confidence intervals:
+
+```{r}
+confint(lm_out)
+```
+
+
+Confidence interval for price of apartment with certain attributes:
+
+```{r}
+newdata = data.frame(city = "Charleston", nbath = 1,
+                     nbed = 1, sqft = 900, pets = "yes")
+# predict(lm_out,newdata = newdata, int = "conf")
+
+# confidence interval
+exp(predict(lm_out,newdata = newdata, int = "conf"))
+
+# prediction interval
+# predict(lm_out,newdata = newdata, int = "pred")
+exp(predict(lm_out,newdata = newdata, int = "pred"))
+```
+
+The anova table below is not exactly what we want..
+```{r}
+anova(lm_out)
+```
+
+
+Include an interaction between sqft and city
+
+```{r}
+
+lm2_out <- lm(log(price) ~ city + nbath + nbed + log(sqft) + pets + city:log(sqft), data = scapts)
+
+summary(lm2_out)
+```
+
+
+```{r}
+
+plot(lm2_out,which = 2)
+plot(lm2_out,which = 1)
+plot(lm2_out,which = 4)
+
+```
